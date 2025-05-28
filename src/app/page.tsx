@@ -17,6 +17,7 @@ import lyImage4 from '../assets/images/double/img_ly_4.png'
 import bgImage5 from '../assets/images/double/img_bg_5.png'
 import lyImage5 from '../assets/images/double/img_ly_5.png'
 import FloatingButton from '@/component/floatingButton/FloatingButton'
+import LatestUpdates from '@/pages/home/latestUpdates/LatestUpdates'
 
 const page = () => {
      const panelData = [
@@ -93,6 +94,7 @@ const page = () => {
                     />
                ))}
                <ClientTestimonials />
+               <LatestUpdates/>
                <FloatingButton />
           </React.Fragment>
      )
