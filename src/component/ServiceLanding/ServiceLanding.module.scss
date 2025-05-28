@@ -1,0 +1,237 @@
+@import '../../scss/abstracts/variable.scss';
+
+.sec {
+     width: 100%;
+     height: calc(100vh - 64px);
+     display: flex;
+     flex-direction: column;
+     margin-top: 64px;
+     padding-block: 5vh;
+}
+.main_con {
+     height: 100%;
+     width: 100%;
+     padding-inline: 2rem;
+     display: flex;
+     background-color: $color-white;
+     max-width: 1800px;
+     margin: auto;
+
+     @media screen and (max-width: 600px) {
+          padding-bottom: 3vh;
+          height: auto;
+          flex: 1;
+     }
+
+     .image_section {
+          flex: 0.42;
+          height: auto;
+          max-height: unset;
+
+          @media screen and (max-width: 600px) {
+               max-height: unset !important;
+          }
+          .image_wrapper {
+               padding-left: 1.5rem;
+               width: 100%;
+               height: 100%;
+
+               @media screen and (max-width: 600px) {
+                    padding-left: 0rem;
+               }
+
+               img {
+                    width: 100%;
+                    height: 100%;
+                    min-width: 100px;
+                    border-radius: 8px;
+               }
+          }
+     }
+
+     .image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+     }
+
+     .details_section {
+          flex: 0.6;
+
+          @media screen and (max-width: 600px) {
+               flex: auto;
+          }
+
+          .con_wrapper {
+               height: 100%;
+               height: 100%;
+               padding-inline: 1.5rem;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+
+               .wrapper {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    row-gap: 3vh;
+               }
+
+               .btn_container {
+                    width: fit-content;
+                    border-radius: 20px;
+                    padding-inline: 0.9rem;
+                    padding-block: 0.5rem;
+                    color: #0e7b68;
+                    font-size: 0.875rem;
+                    background-color: #ededed;
+                    font-weight: $font-weight-sem-bold;
+               }
+
+               .heading {
+                    font-size: $heading-font-size;
+                    width: 95%;
+                    font-weight: 900;
+                    // line-height: 3.5rem;
+                    line-height: 7vh;
+                    color: #011309;
+
+                    @media screen and (max-width: 600px) {
+                         line-height: 5vh;
+                         width: 100%;
+                    }
+
+                    span {
+                         color: #0e7b68;
+                    }
+               }
+
+               .description {
+                    // line-height: 1.3rem;
+                    color: $color-des;
+                    width: 75%;
+                    font-size: $sub-heading-font-size;
+
+                    @media screen and (max-width: 600px) {
+                         width: 100%;
+                    }
+               }
+
+               .bottomImage {
+                    width: 100%;
+                    height: auto;
+                    // max-height: 200px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    @media screen and (max-width: 600px) {
+                         display: none;
+                    }
+               }
+
+               .thumb_nailWrapper_con {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    .thumb_nailWrapper {
+                         cursor: pointer;
+                         overflow: hidden;
+                         border-radius: 8px;
+
+                         .image {
+                              width: 100%;
+                              height: auto;
+                              object-fit: cover;
+                              transition: transform 0.2s ease-in-out;
+
+                              // &:hover {
+                              //      transform: scale(1.05);
+                              // }
+                         }
+                    }
+               }
+
+               .modalOverlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+               }
+
+               .modalContent {
+                    padding: 1rem;
+                    border-radius: 8px;
+                    position: relative;
+                    width: 80%;
+                    max-width: 800px;
+
+                    .closeButton {
+                         position: absolute;
+                         top: -3rem;
+                         right: -10rem;
+                         background: none;
+                         border: none;
+                         font-size: 2rem;
+                         cursor: pointer;
+                         padding-inline: 13px;
+                         padding-block: 7px;
+                         // background-color: #fff;
+                         border-radius: 5px;
+                         color: #fff;
+
+                         &:hover {
+                              color: red;
+                         }
+                    }
+
+                    .videoPlayer {
+                         width: 100%;
+                         height: auto;
+                         border-radius: 8px;
+                    }
+               }
+          }
+     }
+}
+
+.mobbottomImage {
+     display: none;
+     padding-inline: 2rem;
+     width: 100%;
+     //  min-height: 150px;
+     height: auto;
+     overflow: hidden;
+     object-fit: cover;
+     border-radius: 10px;
+
+     @media screen and (max-width: 600px) {
+          display: block;
+     }
+}
+
+.rowReverse {
+     flex-direction: row-reverse;
+
+     .details_section {
+          .con_wrapper {
+               .btn_container {
+                    @media screen and (max-width: 600px) {
+                         margin-left: auto;
+                    }
+               }
+               .wrapper {
+                    @media screen and (max-width: 600px) {
+                         row-gap: 1vh;
+                         text-align: right;
+                    }
+               }
+          }
+     }
+}

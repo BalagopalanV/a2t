@@ -1,0 +1,160 @@
+@import '../../scss/abstracts/variable.scss';
+
+.card {
+     width: 100%;
+     border-radius: 16px;
+     overflow: hidden;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     background-color: #fff;
+     padding: 7px;
+
+     .imageContainer {
+          width: 100%;
+
+          .image {
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
+               border-radius: 10px;
+          }
+     }
+
+     .content {
+          margin-block-start: 20px;
+          padding-inline: 0.5rem;
+          padding-block-end: 1rem;
+
+          .date {
+               color: #6c757d;
+               font-size: 0.875rem;
+               display: flex;
+               align-items: center;
+               gap: 0.5rem;
+               padding-inline-end: 1rem;
+          }
+
+          .title {
+               margin: 8px 0;
+               font-size: 1.3rem;
+               margin-block: 20px;
+               width: 90%;
+               color: #201a2d;
+               max-height: 65px;
+               height: 27rem;
+          }
+
+          .description {
+               font-size: $font-16px;
+               color: #4c4c4c;
+               margin-block: 20px;
+               max-height: 100px;
+          }
+
+          .tags {
+               display: flex;
+               gap: 1.1rem;
+               margin-top: 12px;
+               align-items: flex-end;
+
+               .tag {
+                    padding: 10px 25px;
+                    font-size: 0.875rem;
+                    border-radius: 25px;
+                    color: #27a745;
+                    border: 1px solid #27a745;
+               }
+          }
+
+          .flexCon {
+               min-height: 210px;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+
+               .titleSec {
+                    min-height: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    margin-block-end: 1rem;
+
+                    .header {
+                         padding-block: 1rem;
+                         color: #201A2D;
+                    }
+
+                    .sub_header {
+                         color: #4c4c4c;
+                    }
+               }
+          }
+     }
+}
+
+@media (max-width: 768px) {
+     .card {
+          .content {
+               .date {
+                    font-size: 1.25rem;
+               }
+
+               .title {
+                    font-size: 16px;
+                    margin-block: 10px;
+               }
+
+               .description {
+                    font-size: 1.25rem;
+               }
+
+               .tags {
+                    .tag {
+                         font-size: 1rem;
+                    }
+               }
+
+               .flexCon {
+                    min-height: fit-content;
+
+                    .titleSec {
+                         min-height: fit-content;
+                    }
+               }
+          }
+     }
+}
+
+@media (max-width: 576px) {
+     .card {
+          .content {
+               .date {
+                    font-size: 1.25rem;
+               }
+
+               .title {
+                    font-size: 16px;
+                    margin-block: 10px;
+               }
+
+               .description {
+                    font-size: 1.25rem;
+               }
+
+               .tags {
+                    .tag {
+                         font-size: 1rem;
+                    }
+               }
+
+               .flexCon {
+                    min-height: fit-content;
+
+                    .titleSec {
+                         min-height: fit-content;
+                    }
+               }
+          }
+
+
+     }
+}

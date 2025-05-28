@@ -1,0 +1,64 @@
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-inline: 2rem;
+
+    .label {
+        text-align: left;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: #DADADA;
+
+    }
+
+    .counterBox {
+        display: flex;
+        align-items: center;
+        background-color: #092019;
+        border-radius: 8px;
+        // padding: 5px;
+        border: 1px solid #0A352E;
+        // min-width: 130px;
+
+        .button {
+            background-color: #0A352E;
+            color: #31A591;
+            border: none;
+            width: 36px;
+            height: 36px;
+            font-size: 18px;
+            cursor: pointer;
+            // border-radius: 6px;
+
+            &:hover {
+                background-color: #0c5e50;
+            }
+        }
+
+        .value {
+            background-color: black;
+            color: #728380;
+            padding: 10px 10px;
+            min-width: 60px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            // border-radius: 6px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .counterContainer {
+        min-width: 0px;
+        padding-inline: 0rem;
+
+        .counterBox {
+            .value {
+                min-width: 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,231 @@
+@import '../../../scss/abstracts/variable.scss';
+
+.DigitalGrowth_con {
+    width: 100%;
+    padding-inline: 2rem;
+    background-color: #F3FCF4;
+    max-width: 1800px;
+    margin: auto;
+    padding-block: 1rem;
+    height: auto;
+
+    .content_Wrapper {
+        display: flex;
+        align-items: center;
+        // height: 100vh;
+        height: auto;
+
+        .details_con {
+            flex: 0.4;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+
+        .image_section {
+            flex: 0.6;
+            height: 100%;
+
+            .img_wrapper_index {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                align-items: center;
+
+                .img_index {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                .img_index_top {
+                    width: 16rem;
+                    transform: translateX(0rem) translateY(1rem);
+                    max-width: 600px;
+
+                }
+
+                .img_index_right {
+                    width: 16rem;
+                    transform: translateX(10rem) translateY(-1rem);
+                    max-width: 600px;
+
+
+                }
+
+                .img_index_left {
+                    width: 16rem;
+                    transform: translateX(-3rem) translateY(-7rem);
+                    max-width: 600px;
+
+                }
+
+                .img_wrapper_absolute {
+                    position: absolute;
+
+                    .img_ab {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        border-radius: inherit;
+                    }
+
+                    .img_top_con {
+                        width: 25rem;
+                        height: 100%;
+                        transform: translateX(10rem) translateY(4rem);
+                        z-index: 0;
+                        position: relative;
+                        border-radius: 10px;
+                        max-width: 600px;
+
+                    }
+
+                    .img_right_con {
+                        width: 25rem;
+                        height: 100%;
+                        z-index: 2;
+                        position: relative;
+                        transform: translateY(-11rem) translateX(9rem);
+                        border-radius: 7px;
+                        max-width: 600px;
+
+                    }
+
+                    .img_left_con {
+                        width: 19rem;
+                        height: 100%;
+                        z-index: 2;
+                        position: relative;
+                        transform: translateY(-4rem);
+                        border-radius: 20px;
+                        max-width: 600px;
+
+                    }
+                }
+            }
+
+            .img_wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .image {
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                object-fit: contain;
+            }
+
+            .img_wrapper_2 {
+                width: 70%;
+                height: auto;
+                border-radius: 20px;
+                transform: translateX(-2rem) translateY(-44rem);
+            }
+
+            .img_wrapper_3 {
+                width: 70%;
+                height: auto;
+                border-radius: 7px;
+                transform: translateX(12rem) translateY(-52rem);
+
+            }
+
+            .img_wrapper_6 {
+                width: 70%;
+                height: auto;
+                border-radius: 7px;
+                transform: translateX(-2rem) translateY(-57rem);
+
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .DigitalGrowth_con {
+        padding-block: 5rem;
+
+        .content_Wrapper {
+            flex-direction: column;
+
+            .image_section {
+                width: 100%;
+
+                .img_wrapper_index {
+                    .img_index_right {}
+
+                    .img_index_top {
+                        transform: translateX(-5rem) translateY(2rem);
+                    }
+
+                    .img_wrapper_absolute {
+                        .img_right_con {
+                            transform: translateX(4rem) translateY(-10rem);
+                            width: 30rem;
+                        }
+
+                        .img_top_con {
+                            transform: translateX(9rem) translateY(4rem);
+                        }
+
+                        .img_left_con {
+                            transform: translateY(-4rem) translateX(-9rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .DigitalGrowth_con {
+        padding-block: 5rem;
+
+        .content_Wrapper {
+            flex-direction: column;
+
+            .image_section {
+                width: 100%;
+
+                .img_wrapper_index {
+
+                    .img_index_top {
+                        transform: translateX(-10rem) translateY(2rem);
+                    }
+
+                    .img_index_left {
+                        width: 16rem;
+                        transform: translateX(-8rem) translateY(2rem);
+                    }
+
+                    .img_index_right {
+                        transform: translateX(4rem) translateY(5rem);
+                    }
+
+                    .img_wrapper_absolute {
+                        .img_right_con {
+                            transform: translateX(2rem) translateY(-10rem);
+                            width: 25rem;
+                        }
+
+                        .img_top_con {
+                            transform: translateX(2rem) translateY(4rem);
+                        }
+
+                        .img_left_con {
+                            transform: translateY(-5rem) translateX(-4rem);
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

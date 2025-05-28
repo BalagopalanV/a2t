@@ -1,0 +1,92 @@
+@import '../../../scss/abstracts/variable.scss';
+@import '../../../scss/layout/grid.scss';
+
+.main_container {
+     width: 100%;
+     height: auto;
+     padding-inline: 2rem;
+     padding-block-end: 5rem;
+     padding-block-start: 4rem;
+     background-color: #eff6fa;
+     max-width: 1800px;
+     margin: auto;
+     overflow: hidden;
+
+     .wrapper {
+          width: 100%;
+          height: auto;
+
+          .flexContainer {
+               width: 100%;
+               display: flex;
+               flex-wrap: nowrap;
+               gap: 1rem;
+               position: relative;
+          }
+     }
+
+     .pagination {
+          width: fit-content;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          margin-top: 4rem;
+
+          .bar {
+               width: 45vw;
+               margin-inline: 3vw;
+               height: 3px;
+               border-radius: 10px;
+               display: flex;
+               align-items: center;
+               background-color: #c2dddd;
+
+               .filler {
+                    width: 15%;
+                    height: 5px;
+                    border-radius: 10px;
+                    background-color: #0e7b68;
+                    transition: all 1.5s ease;
+                    position: relative;
+
+                    .counter {
+                         white-space: nowrap;
+                         font-family: 'Inter';
+                         font-weight: 600;
+                         color: #0e7b68;
+                         font-size: 1.05rem;
+                         position: absolute;
+                         top: 0;
+                         right: 0;
+                         transform: translate(50%, -130%);
+                    }
+               }
+          }
+
+          .navBtn {
+               width: 35px;
+               height: 35px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 50%;
+               padding: 5px;
+               cursor: pointer;
+               transition: all 0.3s ease;
+
+               img {
+                    width: 50%;
+                    height: 50%;
+                    object-fit: contain;
+               }
+
+               &:active {
+                    opacity: 0.8;
+               }
+
+               &:hover {
+                    background-color: #c2dddd;
+               }
+          }
+     }
+}
